@@ -1,4 +1,8 @@
+import os
 import streamlit as st
+
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 from agent import ask_agent
 
 st.set_page_config(
