@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Reads your API key from a .env file later.
 load_dotenv()
 
 client = OpenAI()
@@ -26,14 +25,15 @@ def ask_agent(question):
     return response.output_text
 
 
-print("CareerMate is ready. Type 'exit' to stop.")
+if __name__ == "__main__":
+    print("CareerMate is ready. Type 'exit' to stop.")
 
-while True:
-    question = input("\nYou: ")
+    while True:
+        question = input("\nYou: ")
 
-    if question.lower() == "exit":
-        print("Goodbye!")
-        break
+        if question.lower() == "exit":
+            print("Goodbye!")
+            break
 
-    answer = ask_agent(question)
-    print(f"\nCareerMate: {answer}")
+        answer = ask_agent(question)
+        print(f"\nCareerMate: {answer}")
