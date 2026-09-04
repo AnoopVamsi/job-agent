@@ -77,3 +77,27 @@ Never upload your `.env` file or API key to GitHub. This project’s `.gitignore
 - Add a vector database
 - Build a Streamlit web interface
 - Deploy the agent to AWS or Azure
+
+## Web User Interface
+
+CareerMate includes a browser-based chat interface built with Streamlit.
+
+Run the web application locally:
+
+```bash
+python3 -m streamlit run app.py
+```
+
+Then open:
+
+```text
+http://localhost:8501
+```
+
+The interface lets users ask career, AI/ML, cloud, RAG, and interview-preparation questions through a simple chat screen.
+
+## How It Works
+
+```text
+User → Streamlit web UI → CareerMate agent → OpenAI model → Answer
+```
